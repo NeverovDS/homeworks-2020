@@ -1,13 +1,13 @@
-hour = gets.to_i
-min = gets.to_i
+hours = gets.to_i
+minutes = gets.to_i
 # this method turns the time into an angle between the watch strips
-def your_angel(hour, min)
-  an = (min * 6 - (hour * 60 + min) * 0.5).abs
-  if an > 180
-    360 - an .abs
+def calc_angel(hours, minutes)
+  angel = (minutes * 6 - (hours * 60 + minutes) * 0.5).abs
+  if angel > 180
+    360 - angel.abs
   else
-    an .abs
+    angel.abs
   end
 end
 
-puts "#{your_angel(hour, min)} degrees"
+puts "#{calc_angel(hours, minutes)} degrees"
