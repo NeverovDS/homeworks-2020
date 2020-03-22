@@ -10,4 +10,4 @@ def calc_angle(hours, minutes)
   end
 end
 
-puts "#{calc_angel(hours, minutes)} degrees"
+puts "#{calc_angle(hours, minutes)} degrees"
