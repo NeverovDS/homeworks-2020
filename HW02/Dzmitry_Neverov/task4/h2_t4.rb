@@ -4,6 +4,6 @@ def task_4(some_str)
   puts "letters: #{letters.length}, digits: #{digits.length}"
 end
 
-task_4('hel2!lo')
-task_4('wicked .. !')
-task_4('aasd123456a')
+task_4('dxchvjbk')
+task_4('wweths!')
+task_4('aywrjnsdbgfva')
