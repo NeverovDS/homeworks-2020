@@ -13,21 +13,20 @@ class TimeIntervalCalculator
     found_rows.each { |rows| rows.match(TIME_FORMAT) }
   end
 
-  def calc_differ(arr)
-    if arr.length == 2
-      difference = (arr[1] - arr[0]).to_s
-      puts(difference)
-    else
-      #   arr_for_difference = []
-      arr[1..arr.size].map!.with_index(1) do |time, i|
-        (time - arr[i - 1]).abs
-      end
-      puts("arr_for_difference #{arr}")
+  def check_length(arr)
+    arr_for_difference = []
+    arr[1..arr.size].map!.with_index(1) do |time, i|
+      arr_for_difference << (time - arr[i - 1]).abs
     end
+    puts("arr_for_difference #{arr_for_difference}")
   end
 
-  def search_time_empty?
-    search_time.empty?
+  def calc_differ(arr)
+    if arr.length > 2
+      check_length(arr)
+    else
+      puts((arr[1] - arr[0]).to_s)
+    end
   end
 
   def time_one?(arr_for_times)
