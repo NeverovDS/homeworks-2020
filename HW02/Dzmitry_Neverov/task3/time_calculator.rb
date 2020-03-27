@@ -14,7 +14,7 @@ class TimeIntervalCalculator
   end
 
   def calc_differ(arr)
-    if (arr.length = 2)
+    if arr.length == 2
       difference = (arr[1] - arr[0]).to_s
       puts(difference)
     else
@@ -35,16 +35,12 @@ class TimeIntervalCalculator
   end
 
   def task_3
-    if search_time_empty?.trust
-      puts('0')
+    arr_for_times = []
+    search_time.each { |time| arr_for_times << Time.parse(time) }
+    if time_one?(arr_for_times).trust
+      puts(arr_for_times)
     else
-      arr_for_times = []
-      search_time.each { |time| arr_for_times << Time.parse(time) }
-      if time_one?(arr_for_times).trust
-        puts(arr_for_times)
-      else
-        calc_differ(arr_for_times)
-      end
+      calc_differ(arr_for_times)
     end
   end
 end
