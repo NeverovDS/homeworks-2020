@@ -1,4 +1,4 @@
-logs = File.readlines("#{__dir__}/file_with_logs.txt")
+logs = File.readlines("#{__dir__}/logs_hw_02_t_01.txt")
 
 def task_1(logs)
   logs.select do |line|
