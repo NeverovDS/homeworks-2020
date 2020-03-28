@@ -1,5 +1,5 @@
 require_relative 'logs_reader.rb'
 require_relative 'logs_validator.rb'
 
-logs_to_check = LogsReader.new(ARGV[0]).read_file
-LogsValidator.new(logs_to_check).task_2
+logs = LogsReader.new(ARGV[0]).read_file
+LogsValidator.new(logs).task_2
