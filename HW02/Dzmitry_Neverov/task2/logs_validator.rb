@@ -12,16 +12,13 @@ class LogsValidator
 }x.freeze
 
   def task_2
-    arr = []
-    valid_logs = 0
-    logs_to_check.map do |line|
-      next unless line.match?(LOG_VALIDATE)
+    matches = valid_logs.map.with_index { |line, _| line.match(LOG_VALIDATE) }
+    puts(matches)
+  end
 
-      matches = line.match(LOG_VALIDATE)
-      arr << "#{matches[:date]} FROM:#{matches[:ip]} TO:#{matches[:url].upcase}"
-      valid_logs += 1
-    end
-    puts(arr)
-    puts if valid_logs.zero?
+  private
+
+  def valid_logs
+    logs_to_check.select { |line| line.match?(LOG_VALIDATE) }
   end
 end
