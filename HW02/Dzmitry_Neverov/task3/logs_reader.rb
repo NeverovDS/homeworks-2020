@@ -1,4 +1,4 @@
-class ReaderLogs
+class LogsReader
   attr_reader :filename
 
   def initialize(filename)
