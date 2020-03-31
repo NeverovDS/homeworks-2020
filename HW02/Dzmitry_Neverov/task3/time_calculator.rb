@@ -37,9 +37,9 @@ end
 private
 
 def calc_differ(arr)
-if arr.length > 2
+  if arr.length > 2
   check_length(arr)
-else
+  else
   print((arr[1] - arr[0]).to_s)
-end
+  end
 end
