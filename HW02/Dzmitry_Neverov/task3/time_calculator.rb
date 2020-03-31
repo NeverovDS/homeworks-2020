@@ -38,8 +38,8 @@ private
 
 def calc_differ(arr)
   if arr.length > 2
-  check_length(arr)
+    check_length(arr)
   else
-  print((arr[1] - arr[0]).to_s)
+    print((arr[1] - arr[0]).to_s)
   end
 end
