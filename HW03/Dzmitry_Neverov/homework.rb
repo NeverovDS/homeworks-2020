@@ -1,7 +1,7 @@
 class Homework
-  attr_reader :hw_name
+  attr_reader :homework_name
 
-  def initialize(hw_name:)
-    @hw_name = hw_name
+  def initialize(homework_name:)
+    @homework_name = homework_name
   end
 end

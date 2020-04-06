@@ -1,6 +1,6 @@
 class Mentor
   attr_reader :name, :surname, :notification
-  attr_accessor :all_hw
+  attr_accessor :all_homework
   def initialize(name:, surname:)
     @name = name
     @surname = surname
@@ -8,7 +8,7 @@ class Mentor
   end
 
   def subscribe_to(student)
-    student.mentor_student << self
+    student.students_with_mentor << self
   end
 
   def notifications
