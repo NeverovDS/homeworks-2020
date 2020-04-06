@@ -9,7 +9,6 @@ class Mentor
 
   def subscribe_to(student)
     student.mentor_student << self
-    puts("Mentor subscribe to #{student.name} #{student.surname}")
   end
 
   def notifications
