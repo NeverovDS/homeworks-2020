@@ -15,14 +15,12 @@ class Student
     end
   end
 
-  def submit_homework!(homework_data, student)
-    new_homework = Homework.new(homework_data).hw_name
-    all_hw << new_homework
-    notification_for_mentor(new_homework)
-    puts("#{student.name} #{student.surname} submit homework #{new_homework}")
+  def submit_homework!(new_task)
+    all_hw << new_task
+    notification_for_mentor(new_task)
   end
 
-  def homework_list
+  def view_homework_list
     puts("All homework #{name} #{surname} :#{all_hw}")
   end
 end
