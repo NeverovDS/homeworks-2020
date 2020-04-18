@@ -1,7 +1,7 @@
 require 'rspec'
 require 'my_module.rb'
 
-describe '#my_each' do
+describe 'my_each' do
   let(:a) { Array.new([1, 2, 3, 4, 5]) }
   let(:result) { [] }
 
@@ -30,7 +30,7 @@ describe '#my_each' do
   end
 end
 
-describe '#my_map' do
+describe 'my_map' do
   let(:a) { Array.new([1, 2, 3, 4, 5]) }
 
   context 'when has a block' do
@@ -51,13 +51,14 @@ describe '#my_map' do
 
   context 'when empty array' do
     let(:a) { Array.new([]) }
+
     it 'returns an empty array' do
       expect(a.my_map { |x| x + 3 }).to eq([])
     end
   end
 end
 
-describe '#my_select' do
+describe 'my_select' do
   let(:a) { Array.new([1, 2, 3, 4, 5]) }
 
   context 'when has a block' do
@@ -78,6 +79,7 @@ describe '#my_select' do
 
   context 'when empty array' do
     let(:a) { Array.new([]) }
+
     it 'returns an empty array' do
       expect(a.my_select { |x| x < 3 }).to eq([])
     end
