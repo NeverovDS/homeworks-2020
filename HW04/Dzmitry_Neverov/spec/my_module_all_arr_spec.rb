@@ -1,5 +1,5 @@
 require_relative 'my_module.rb'
-# rubocop:disable Metrics/BlockLength
+  # rubocop:disable Metrics/BlockLength
 RSpec.describe Array do
   let(:test_arr) { described_class.new([1, 2, 3, 4, 5]) }
   let(:empty_arr) { described_class.new([]) }
@@ -27,6 +27,7 @@ RSpec.describe Array do
       end
     end
   end
+  # rubocop:enable Metrics/BlockLength
 
   describe '#my_each' do
   context 'when has a block' do
@@ -55,7 +56,9 @@ RSpec.describe Array do
     end
   end
   end
+
   # rubocop:disable Layout/LineLength
+
   describe '#my_select' do
     context 'when has a block' do
       it 'returns selected array ' do
@@ -72,7 +75,7 @@ RSpec.describe Array do
         expect(test_arr.my_select).to be_an_instance_of(Enumerator)
       end
     end
-
+    # rubocop:enable Layout/LineLength
     context 'when empty array' do
       let(:test_empty) { described_class.new([]) }
 
