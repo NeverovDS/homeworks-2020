@@ -28,7 +28,6 @@ RSpec.describe Array do
     end
   end
 
-
   describe '#my_each' do
   context 'when has a block' do
     it 'yields each element to the block' do
@@ -56,7 +55,7 @@ RSpec.describe Array do
     end
   end
   end
-
+  # rubocop:disable Layout/LineLength
   describe '#my_select' do
     context 'when has a block' do
       it 'returns selected array ' do
