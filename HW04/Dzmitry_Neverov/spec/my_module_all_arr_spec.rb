@@ -25,27 +25,27 @@ RSpec.describe Array do
       it 'returns an empty array' do
         expect(empty_arr.my_map { |x| x + 3 }).to eq([])
       end
-    end 
+    end
   end
   # rubocop:enable Metrics/BlockLength
 
   describe '#my_each' do
     context 'when has a block' do
-    it 'yields each element to the block' do
+      it 'yields each element to the block' do
       expect do |block|
         test_arr.my_each(&block)
       end.to yield_successive_args(1, 2, 3, 4, 5)
-    end
+      end
 
-    it 'will return a calculated array' do
-      result = []
-      test_arr.my_each { |x| result << x + 3 }
-      expect(result).to eq([4, 5, 6, 7, 8])
-    end
+      it 'will return a calculated array' do
+        result = []
+        test_arr.my_each { |x| result << x + 3 }
+        expect(result).to eq([4, 5, 6, 7, 8])
+      end
 
-    it 'returns the original array' do
-      expect(test_arr.my_each {}).to eq([1, 2, 3, 4, 5])
-    end
+      it 'returns the original array' do
+        expect(test_arr.my_each {}).to eq([1, 2, 3, 4, 5])
+      end
     end
 
     context 'when empty array ' do
