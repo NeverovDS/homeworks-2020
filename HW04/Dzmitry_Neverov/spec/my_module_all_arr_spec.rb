@@ -25,7 +25,7 @@ RSpec.describe Array do
       it 'returns an empty array' do
         expect(empty_arr.my_map { |x| x + 3 }).to eq([])
       end
-    end
+    end 
   end
   # rubocop:enable Metrics/BlockLength
 
@@ -46,15 +46,15 @@ RSpec.describe Array do
     it 'returns the original array' do
       expect(test_arr.my_each {}).to eq([1, 2, 3, 4, 5])
     end
-  end
-
-  context 'when empty array ' do
-    let(:empty_arr) { described_class.new([]) }
-
-    it 'returns an empty array' do
-      expect(empty_arr.my_each { |x| x + 3 }).to eq([])
     end
-  end
+
+    context 'when empty array ' do
+      let(:empty_arr) { described_class.new([]) }
+
+      it 'returns an empty array' do
+        expect(empty_arr.my_each { |x| x + 3 }).to eq([])
+      end
+    end
   end
 
   # rubocop:disable Layout/LineLength
