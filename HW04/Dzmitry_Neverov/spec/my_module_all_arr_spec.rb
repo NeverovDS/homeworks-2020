@@ -33,7 +33,7 @@ RSpec.describe Array do
     context 'when has a block' do
       it 'yields each element to the block' do
         expect do |block|
-        test_arr.my_each(&block)
+          test_arr.my_each(&block)
         end.to yield_successive_args(1, 2, 3, 4, 5)
       end
 
