@@ -6,11 +6,11 @@ RSpec.describe Array do
 
   describe '#my_map' do
     context 'when has a block' do
-      it 'will return a calculated array' do
+      it 'returns a calculated array' do
         expect(test_arr.my_map { |x| x + 3 }).to eq([4, 5, 6, 7, 8])
       end
 
-      it 'the result is the same as default method map' do
+      it 'returns the same result as default method map' do
         expect(test_arr.my_map { |x| x + 3 }).to eq(test_arr.map { |x| x + 3 })
       end
     end
@@ -37,7 +37,7 @@ RSpec.describe Array do
         end.to yield_successive_args(1, 2, 3, 4, 5)
       end
 
-      it 'will return a calculated array' do
+      it 'returns a calculated array' do
         result = []
         test_arr.my_each { |x| result << x + 3 }
         expect(result).to eq([4, 5, 6, 7, 8])
@@ -65,7 +65,7 @@ RSpec.describe Array do
         expect(test_arr.my_select { |x| x < 3 }).to eq([1, 2])
       end
 
-      it 'the result is the same as default method select' do
+      it 'returns the same result as default method select' do
         expect(test_arr.my_select { |x| x < 3 }).to eq(test_arr.select { |x| x < 3 })
       end
     end
